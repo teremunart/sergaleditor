@@ -1,4 +1,8 @@
-﻿using System.Collections;
+//
+// This is git test.
+//
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
