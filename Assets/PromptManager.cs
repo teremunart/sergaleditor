@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PromptManager : MonoBehaviour {
     public GameObject objectPrompt;
 
+		// Pumakäfig
     public void ChangeVisibility() => objectPrompt.SetActive(!objectPrompt.activeSelf);
 
     public void CancelBtn() => ChangeVisibility();
