@@ -5,12 +5,14 @@ using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
 using Random = System.Random;
 
-public class Settings4_1 : MonoBehaviour {
+public class Settings4 : MonoBehaviour {
 
     // New in 4.1
     public GameObject objectColorBox;
     public GameObject objectColorSet;
     
+    public string speciesName;
+
     // GLOBAL VARIABLES
     public int lengthOfArray = 0;
     public int step;
@@ -152,22 +154,22 @@ public class Settings4_1 : MonoBehaviour {
 
         sergalName.text = _randomNames.GenerateCustomName().ToUpper();
         switch (paletteType) {
-            case 0: sergalType.text = "GENERATED SEGAL"; break;
-            case 1: sergalType.text = "PURE NORTHERN SEGAL"; break;
-            case 2: sergalType.text = "CIVILIZED NORTHERN SEGAL"; break;
-            case 3: sergalType.text = "WESTERN SEGAL"; break;
-            case 4: sergalType.text = "EASTERN SEGAL"; break;
-            case 5: sergalType.text = "PURE SOUTHERN SEGAL"; break;
-            case 6: sergalType.text = "CIVILIZED SOUTHERN SEGAL"; break;
+            case 0: sergalType.text = $"GENERATED {speciesName}"; break;
+            case 1: sergalType.text = $"PURE NORTHERN {speciesName}"; break;
+            case 2: sergalType.text = $"CIVILIZED NORTHERN {speciesName}"; break;
+            case 3: sergalType.text = $"WESTERN {speciesName}"; break;
+            case 4: sergalType.text = $"EASTERN {speciesName}"; break;
+            case 5: sergalType.text = $"PURE SOUTHERN {speciesName}"; break;
+            case 6: sergalType.text = $"CIVILIZED SOUTHERN {speciesName}"; break;
         }
         
-        RandomTile(0, paletteType);                                    // PRIMARY COLOR
-        RandomTile(1, paletteType, patternLayers.Length, "secondary"); // SECONDARY COLOR
-        RandomTile(2, paletteType);                                    // MOUTH
+        RandomTile(0, paletteType);                                                     // PRIMARY COLOR
+        RandomTile(1, paletteType, patternLayers.Length, "secondary");         // SECONDARY COLOR
+        RandomTile(2, paletteType);                                                     // MOUTH
         if (_systemRandom.Next(0, 10) > 3) {
-            RandomTile(3, paletteType, extraLayers.Length, "pattern"); // PATTERN 1
+            RandomTile(3, paletteType, extraLayers.Length, "pattern");         // PATTERN 1
             if (_systemRandom.Next(0, 10) > 5) {
-                RandomTile(4, paletteType, extraLayers.Length, "pattern"); // PATTERN 2
+                RandomTile(4, paletteType, extraLayers.Length, "pattern");     // PATTERN 2
                 if (_systemRandom.Next(0, 10) > 7) {
                     RandomTile(5, paletteType, extraLayers.Length, "pattern"); // PATTERN 3
                 }   

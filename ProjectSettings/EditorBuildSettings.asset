@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Menu.unity
+    path: Assets/_SCENES/_Menu.unity
     guid: a3ebd58b97eb6df48a8829c9f3bd9505
   - enabled: 1
-    path: Assets/_SergalEditorOld.unity
+    path: Assets/_SCENES/_SergalEditorOld.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/_SergalEditorNew.unity
+    path: Assets/_SCENES/_SergalEditorNew.unity
     guid: 2e3a06ce3312b044887dc961d7f8d3bf
   m_configObjects: {}
