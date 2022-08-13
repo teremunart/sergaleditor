@@ -196,8 +196,9 @@ public class Settings4_1 : MonoBehaviour {
     }
     
     private void ResetSergal() {
-        for (int i = 0; i < imageColor.Length; i++) imageColor[i] = new Color32(255,255,255, 255);
-
+        for (int i = 0; i < imageColor.Length; i++) imageColor[i] = new Color32(214,214,214, 255);
+        for (int i = 0; i < colorPalette.Length; i++) colorPalette[i].color = new Color32(214,214,214, 255);
+        
         for (int i = 3; i < 10; i++) refLayer[i].GetComponent<Image>().sprite = extraLayers[0];
     }
     
